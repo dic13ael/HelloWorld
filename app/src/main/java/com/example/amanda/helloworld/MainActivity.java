@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-        public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
+    public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -52,14 +43,32 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    /** Called when the user clicks the Send button */
+
+    /**
+     * Called when the user clicks the Send button
+     */
     public void sendMessage(View view) {
         Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
-        }
+    }
+    // Do something in response to button
+
+    /**
+     * Called when the user clicks the Send button
+     */
+    public void accelerometer(View view) {
+        Intent intent = new Intent(MainActivity.this, AccelerometerActivity.class);
+        startActivity(intent);
+
         // Do something in response to button
     }
+
+    public void compass(View view) {
+        Intent intent = new Intent(MainActivity.this, CompassActivity.class);
+        startActivity(intent);
+    }
+}
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,14 +9,58 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_my">
     <EditText android:id="@+id/edit_message"
-        android:layout_weight="1"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_message" />
+        android:hint="@string/edit_message"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/button2"
+        android:layout_toRightOf="@+id/button2" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
-        android:onClick="sendMessage"/>
+        android:onClick="sendMessage"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp"
+        android:layout_toLeftOf="@+id/edit_message"
+        android:layout_toStartOf="@+id/edit_message" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_accelerometer"
+        android:onClick="accelerometer"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="94dp" />
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/button_compass"
+         android:onClick="compass"
+         android:layout_below="@+id/button2"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true"
+         android:layout_marginTop="83dp"
+         android:layout_alignRight="@+id/button2"
+         android:layout_alignEnd="@+id/button2" />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="Please select one option"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="78dp"
+        android:layout_marginStart="78dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+</RelativeLayout>
