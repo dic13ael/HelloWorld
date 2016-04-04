@@ -12,9 +12,27 @@
     tools:context="com.example.amanda.helloworld.AccelerometerActivity"
     tools:showIn="@layout/activity_accelerometer">
     <TextView
-        android:id="@+id/acceleration"
+        android:id="@+id/accelerationX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="X: Y: Z:"
-        />
+        android:text="X:"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#df2828" />
+    <TextView
+        android:id="@+id/accelerationY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y:"
+        android:layout_below="@id/accelerationX"
+        android:textColor="#42f70a" />
+    <TextView
+        android:id="@+id/accelerationZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Z:"
+        android:layout_below="@id/accelerationY"
+        android:textColor="#232fdc" />
+
 </RelativeLayout>

@@ -25,9 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
         android:layout_marginTop="20dp"
         android:text="Heading: 0.0"
-        />
+        android:textColor="#db3030"
+        android:textIsSelectable="false"
+        android:phoneNumber="false"
+        android:textSize="@dimen/design_fab_content_size" />
 
 </RelativeLayout>

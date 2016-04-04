@@ -7,7 +7,9 @@
     android:orientation="horizontal"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/activity_my">
+    tools:showIn="@layout/activity_my"
+    android:background="@drawable/bakgrund">
+
     <EditText android:id="@+id/edit_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +30,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="53dp"
         android:layout_toLeftOf="@+id/edit_message"
-        android:layout_toStartOf="@+id/edit_message" />
+        android:layout_toStartOf="@+id/edit_message"
+        android:textColor="#e01e1e" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +41,8 @@
         android:layout_below="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="94dp" />
+        android:layout_marginTop="94dp"
+        android:textColor="#e01e1e" />
      <Button
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
@@ -49,8 +53,8 @@
          android:layout_alignParentStart="true"
          android:layout_marginTop="83dp"
          android:layout_alignRight="@+id/button2"
-         android:layout_alignEnd="@+id/button2" />
-
+         android:layout_alignEnd="@+id/button2"
+         android:textColor="#e01e1e"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,6 +65,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="78dp"
         android:layout_marginStart="78dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="#0c0b0b" />
 
 </RelativeLayout>
